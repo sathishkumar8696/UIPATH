@@ -1,0 +1,595 @@
+Delivered-To: sathishkapoor8696@gmail.com
+Received: from mail.cb1154.mlrctk.com (mail.cb1154.mlrctk.com. [103.197.16.154])
+	by mx.google.com with ESMTPS
+	id z25-20020ab03419000000b00783eaffb2a8si2077013uap
+	.53.2023.06.16.22.53.39        for
+	<sathishkapoor8696@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+	Fri, 16 Jun 2023 22:53:40 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ6L6b3Kj3uVBYtZVcFlzxNIh1bvoGkvSOVj5TND1xl9rztcxqCJR8abuya3gChUGH2f3i7O
+X-Received: by 2002:a05:620a:a92:b0:75d:50f8:fa82 with SMTP id
+ v18-20020a05620a0a9200b0075d50f8fa82mr3863023qkg.30.1686981220047;       
+ Fri, 16 Jun 2023 22:53:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1686981220; cv=none; d=google.com;
+	s=arc-20160816;
+	b=SPi2jpdqbm75And0/6Hg2C9viSwWK4ffkxPfAdm8qkKeMjXltrhes9Ai1/JZK1eSb0DPuLVjPlb
+	srWvp4F9mPbtz8+Mo8TzEFecKkoxl6T5tRVRZzN/0aGMjT4Ma8o367z1aeZ8WbIr01NCB+s8RoHkL
+	VtQ/8KpCZctQCnAOIQ5EeW51zTKSmbc+9l7E1/0lAx4WWs39S12bx5bodXZpHr8dwzqxcIazrxheu
+	rJTeGJ+rTIA41QZbjNLHO0gM2kYDMCZkUoZJ1L09aCBX3H15kbTGOOyij8EwghGPC1sh5EFDZLthG
+	0I8shyE8b2cdU58+M6C2CVQ+/cA4VScfY0gA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=mime-version:feedback-id:list-unsubscribe-post:list-unsubscribe:reply-to:
+	to:from:subject:message-id:date:dkim-signature:dkim-signature;
+	bh=NSSF+rS7qc1XowtNqDPa5Y079/V/t4w5s5kCRyR+dxg=;
+	b=R0s2eUSiUFA/yusuLexKOH3q8dnLTNeyu/3HykC/rsIygRzktTkjvr+1yjRlS25TrHzLW+YXFT1
+	c3PfrQeExU8uoUiCHgazOSI7a4Olsvl9awTYMdSbGtzixs0qfnbMPOYe3D/0//lz/JnA9HxJvw+Eq
+	Dr0gdi7UBQHUexWmyKR0FF+Rr4pUTjWhGiGH99TtY+vDyTA0fPOtuWmXI8bMk3h9F1FQOhh2ImGbZ
+	clLTaYAe2OZ43BknCxshD9nAziqv88jOLUyCmZtabW5UYv6EPTz2aGDhxYIRf/3yAeZroqNeP3xE8
+	Z6JkdLuDpzl+0IoLIS9Dt3uSi0AKORC6k04Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@freshersindia.in header.s=k1 header.b=Pw2XgLb5;
+	dkim=pass header.i=@mlrct.com header.s=k1 header.b=mZ2HFyoS; spf=pass
+	(google.com: domain of bounce.cli3108-780501-780501-1655713285-2055-4031-31643-66-p1242@mc.freshersindia.in designates 103.197.16.154 as permitted sender)
+	smtp.mailfrom=
+	bounce.cli3108-780501-780501-1655713285-2055-4031-31643-66-p1242@mc.freshersindia.in;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=freshersindia.in
+Return-Path: =?utf-8?q?=3Cbounce=2Ecli3108-780501-780501-1655713285-2055-4031-31643-66-p?=
+ =?utf-8?q?1242=40mc=2Efreshersindia=2Ein=3E?=
+Received-SPF: pass (google.com: domain of
+ =?utf-8?q?bounce=2Ecli3108-780501-780501-1655713285-2055-4031-31643-66-p1?=
+ =?utf-8?q?242=40mc=2Efreshersindia=2Ein?= designates 103.197.16.154 as
+ permitted sender) client-ip=103.197.16.154;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@freshersindia.in header.s=k1 header.b=Pw2XgLb5;
+	dkim=pass header.i=@mlrct.com header.s=k1 header.b=mZ2HFyoS; spf=pass
+	(google.com: domain of bounce.cli3108-780501-780501-1655713285-2055-4031-31643-66-p1242@mc.freshersindia.in designates 103.197.16.154 as permitted sender)
+	smtp.mailfrom=
+	bounce.cli3108-780501-780501-1655713285-2055-4031-31643-66-p1242@mc.freshersindia.in;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=freshersindia.in
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; s=k1;
+	d=mlrct.com; t=1686980732; h=subject:from:to;
+	bh=NSSF+rS7qc1XowtNqDPa5Y079/V/t4w5s5kCRyR+dxg=;
+	b=mZ2HFyoSTRTrEm37O7uW6S8KUNDP9MfqrnA1OIpkD6m5xzmFsQ/oyyzgXsOqh60TjosyRnxWa4n
+	2gJlEtCLKjZmugUGZSBXALE0KCM78xxH1cf0zfF6DvRUpnlZ5h1oy+3hDBdX8HToDYGFHXmfGCnk8
+	hegaPPoJMziH1KXWckGS/OUlj0hrWpQ10SuSeUeqbHVeXwv5S3h9gMznmPdUmTF5K7un3nFPRGcTA
+	vozUi0+IbN4L3fZqifvUNvWSpktaTwdTxOuijG0xCyJn7+ue6gtGG+tpjdYETy3P0CT59ZYePF8R5
+	yNHNEvPVk6tw5seQAX5tsVQqWeVaphZUa1uw==
+Date: Sat, 17 Jun 2023 05:45:32 +0000
+Message-ID: <1686980732-MTY1NTcxMzI4NS03ODA1MDE@mc.freshersindia.in>
+Subject: Job Openings in TCS with 15 LPA Package and You are eligible to Apply
+From: Rajeswari <sanjoli.raj@freshersindia.in>
+To: sathishkapoor8696@gmail.com
+Reply-To: sanjoli.raj@freshersindia.in
+List-Unsubscribe: =?utf-8?q?=3Chttps=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fus=2FukayMCahWPHIafAkMKgFfXkdsIfMh?=
+ =?utf-8?q?yafAblCafFMUbWedMszaDlbMBcES=3E=2C?=
+ =?utf-8?q?_=3Cmailto=3Aunsub=2Ecli3108-780501-780501-1655713285-2055-4031-3164?=
+ =?utf-8?q?3-66-p1242=40mc=2Efreshersindia=2Ein=3Fsubject=3Dunsubscribe=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-campaignid: 780501
+X-SentFromServer: 103.197.16.154
+X-Subscriber-ID: 1655713285
+Feedback-ID: 3665:1655713285:3108:freshersin
+MIME-Version: 1.0
+Uid: 3
+Folder: UIPATH Testing 2
+Sender: Rajeswari <sanjoli.raj@freshersindia.in>
+PlainText: Good News.. 15 Lakhs Salary Package Waiting for You in TCS This is
+ the Best Chance to get your Job in TCS Company. Just **Upload Your Latest
+ Resume** Here. Company will Send Venue Details and Date of Interview in
+ Confirmation mail **Note: Many people are just uploading CV but they are not
+ completing the registration. You will get interview calls only after the
+ completion of all the steps of registration** All the Best..
+ =?utf-8?q?!=5BFb=5D=28https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-media=2Fblac?=
+ =?utf-8?q?k-logos=2Ffacebook=2Epng?=
+ =?utf-8?q?_=22Facebook=22=29!=5BTw=5D=28https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial?=
+ =?utf-8?q?-media=2Fblack-logos=2Ftwitter=2Epng?=
+ =?utf-8?q?_=22Twitter=22=29!=5BBe=5D=28https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-?=
+ =?utf-8?q?media=2Fblack-logos=2Finstagram=2Epng?=
+ =?utf-8?q?_=22Instagram=22=29!=5BYt=5D=28https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocia?=
+ =?utf-8?q?l-media=2Fblack-logos=2Fyoutube=2Epng?= "Youtube")19 High St,
+ Hitchin, Hertfordshire,SG5 1HU, United Kingdom. =?utf-8?b?wqk=?=
+ ddbuilder.com, Inc. All Rights Reserved.
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+ xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"> <head> <meta
+ charset="UTF-8"> <meta content="width=device-width, initial-scale=1"
+ name="viewport"> <meta name="x-apple-disable-message-reformatting"> <meta
+ http-equiv="X-UA-Compatible" content="IE=edge"> <meta content="telephone=no"
+ name="format-detection"> <title>Job Openings in TCS with 15 LPA Package and
+ You are eligible to Apply</title> <!--[if (mso 16)]> <style type="text/css">
+ a {text-decoration: none;} </style> <![endif]--> <!--[if gte mso
+ 9]><style>sup { font-size: 100% !important; }</style><![endif]--> <!--[if gte
+ mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG></o:AllowPNG>
+ <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml>
+ <![endif]--> <style type="text/css">@import
+ url("https://img3538c.freshersindia.in/uploads/fonts.css");</style> <style
+ type="text/css"> .rollover:hover .rollover-first {max-height:0px
+ !important;display:none !important;} .rollover:hover .rollover-second
+ {max-height:none !important;display:block !important;} #outlook a
+ {padding:0;} .ml-button {mso-style-priority:100
+ !important;text-decoration:none;} a[x-apple-data-detectors] {color:inherit
+ !important;text-decoration:none !important;font-size:inherit
+ !important;font-family:inherit !important;font-weight:inherit
+ !important;line-height:inherit !important;} .ml-desk-hidden
+ =?utf-8?q?{display=3Anone=3Bfloat=3Aleft=3Boverflow=3Ahidden=3Bwidth=3A0=3Bmax-height=3A0?=
+ =?utf-8?q?=3Bline-height=3A0=3Bmso-hide=3Aall=3B}?= [data-ogsb] .ml-button
+ {border-width:0 !important;padding:10px 20px 10px 20px !important;} @media
+ only screen and (max-width:600px) { .st-br {padding-left:10px
+ !important;padding-right:10px !important;} p, ul li, ol li, a
+ {line-height:150% !important;} h1 {font-size:30px !important;line-height:150%
+ !important;} h2 {font-size:26px !important;line-height:150% !important;} h3
+ {font-size:20px !important;line-height:150% !important;} .ml-content-body h1
+ a {font-size:30px !important;} .ml-content-body h2 a {font-size:26px
+ !important;} .ml-content-body h3 a {font-size:20px !important;} .ml-menu td a
+ {font-size:14px !important;} *[class="gmail-fix"] {display:none !important;}
+ .ml-m-txt-c, .ml-m-txt-c h1, .ml-m-txt-c h2, .ml-m-txt-c h3
+ {text-align:center !important;} .ml-m-txt-r, .ml-m-txt-r h1, .ml-m-txt-r h2,
+ .ml-m-txt-r h3 {text-align:right !important;} .ml-m-txt-l, .ml-m-txt-l h1,
+ .ml-m-txt-l h2, .ml-m-txt-l h3 {text-align:left !important;} .ml-m-txt-r img,
+ .ml-m-txt-c img, .ml-m-txt-l img {display:inline !important;}
+ .ml-button-border {display:block !important;} a.ml-button, button.ml-button
+ {display:block !important;border-left-width:0px
+ !important;border-right-width:0px !important;} .ml-adaptive table, .ml-left,
+ .ml-right {width:100% !important;} .ml-content table, .ml-content {width:100%
+ !important;max-width:600px !important;} .ml-adapt-td {display:block
+ !important;width:100% !important;} .adapt-img {width:100%
+ !important;height:auto !important;} .ml-m-p0 {padding:0 !important;}
+ .ml-m-p0r {padding-right:0 !important;} .ml-m-p0l {padding-left:0
+ !important;} .ml-m-p0t {padding-top:0 !important;} .ml-m-p0b
+ {padding-bottom:0 !important;} .ml-m-p20b {padding-bottom:20px !important;}
+ .ml-mobile-hidden, .ml-hidden {display:none !important;} tr.ml-desk-hidden,
+ td.ml-desk-hidden, table.ml-desk-hidden {width:auto
+ !important;overflow:visible !important;float:none
+ !important;max-height:inherit !important;line-height:inherit !important;}
+ tr.ml-desk-hidden {display:table-row !important;} table.ml-desk-hidden
+ {display:table !important;} td.ml-desk-menu-hidden {display:table-cell
+ !important;} .ml-menu td {width:1% !important;} table.ml-table-not-adapt,
+ .esd-block-html table {width:auto !important;} table.ml-smedia
+ {display:inline-block !important;} table.ml-smedia td {display:inline-block
+ !important;} } </style> <!--[if gte mso 12]> <style type="text/css">
+ .mso-right { padding-left: 20px; } </style> <![endif]--></head><body
+ style=";width:100%;font-family:arial,'helvetica
+ =?utf-8?q?neue'=2Chelvetica=2Csans-serif=3B-webkit-text-size-adjust=3A100%=3B-ms-?=
+ =?utf-8?q?text-size-adjust=3A100%=3Bpadding=3A0=3BMargin=3A0=22=3E?= <div
+ style="width:100%"><div bgcolor="#F2F6F8" class="ml-wrapper-color"
+ style="background-color: #f2f6f8;"><!--[if gte mso 9]> <v:background
+ xmlns:v="urn:schemas-microsoft-com:vml" fill="t"> <v:fill type="tile"
+ color="#f2f6f8"></v:fill> </v:background> <![endif]--><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%" bgcolor="#f2f6f8"
+ class="ml-wrapper"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bpadding=3A0=3BMargin=3A0=3Bwidth=3A100%?=
+ =?utf-8?q?=3Bheight=3A100%=22=3E=3Ctr=3E=3Ctd?= valign="top"
+ class="mld-email-paddings" style="padding:0;Margin:0"><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%" align="center"
+ class="ml-content"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Btable-layout=3Afixed?=
+ !important;width:100%"><tbody><tr><td align="center"
+ style="Margin:0;padding:0px"><table cellspacing="0" cellpadding="0"
+ role="presentation" align="center" width="600" class="ml-content-body"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bwidth=3A600px=22=3E=3Ctbody=3E=3Ctr?=
+ ><td align="left" bgcolor="#FFFFFF" class="mld-structure"
+ style="Margin:0;background-color:#ffffff;padding:40px"><!--[if mso]><table
+ style="width:520px" cellpadding="0" cellspacing="0"><tr><![endif]--><!--[if
+ mso]><td style="width:520px" valign="top"><![endif]--><table cellspacing="0"
+ cellpadding="0" role="presentation" align="left" class="ml-left"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bfloat=3Aleft=22=3E=3Ctbody=3E=3Ctr?=
+ class="mld-container"><td align="center" valign="top" class="ml-m-p20b"
+ style="Margin:0;margin:0px;padding:0px;width:520px"><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-spaci?=
+ =?utf-8?q?ng=3A0px=3Bpadding=3A0px=3Bborder-radius=3A0px=3Bborder-collapse=3Acollapse?=
+ =?utf-8?q?=22=3E=3Ctr?= class="mld-element"><td align="left"
+ style="Margin:0;padding:0px 0px 20px"><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EGood_News=2E=2E=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E15?= Lakhs
+ Salary Package Waiting for You in TCS</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EThis?= is the
+ Best Chance to get your Job&nbsp;in TCS Company.</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EJust_=3Cstrong=3E=3Ca?=
+ target="_blank" 
+ =?utf-8?q?href=3D=22https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Flinks=2FukayMCahWPHIafAkMKgFf?=
+ =?utf-8?q?XkdsIfMhyafAblCafFMUbWedMszaDlbMBcES=2F1260498=22?=
+ =?utf-8?q?_style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3EUpload?= Your Latest Resume</a></strong> Here.
+ Company will Send Venue Details and Date of Interview&nbsp;in Confirmation
+ mail</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E=3Cstrong=3ENote=3A?=
+ Many people are just uploading CV but they are not completing the
+ registration. You will get interview calls only after the completion of all
+ the steps of registration</strong></p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EAll_the?=
+ Best..</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bfont-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bfont-family=3Aarial=2C'he?=
+ =?utf-8?q?lvetica?=
+ =?utf-8?q?_neue'=2Chelvetica=2Csans-serif=3Bline-height=3A150%=3Bfont-size=3A16px=3Bfo?=
+ =?utf-8?q?nt-style=3Anormal=3Bfont-weight=3Anormal=3Bcolor=3A#22364c=22=3E&nbsp=3B=3C=2Fp=3E=3C?=
+ =?utf-8?q?=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E=3C!--=5Bif?=
+ mso]></td><![endif]--><!--[if mso]></tr></table><![endif]--></td></tr><tr
+ ><td align="left" bgcolor="#F2F5F8" class="mld-structure"
+ style="Margin:0;background-color:#f2f5f8;padding:40px"><!--[if mso]><table
+ style="width:520px" cellpadding="0" cellspacing="0"><tr><![endif]--><!--[if
+ mso]><td style="width:520px" valign="top"><![endif]--><table cellspacing="0"
+ cellpadding="0" role="presentation" align="left" class="ml-left"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bfloat=3Aleft=22=3E=3Ctbody=3E=3Ctr?=
+ class="mld-container"><td align="center" valign="top" class="ml-m-p20b"
+ style="Margin:0;margin:0px;padding:0px;width:520px"><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-spaci?=
+ =?utf-8?q?ng=3A0px=3Bpadding=3A0px=3Bborder-radius=3A0px=3Bborder-collapse=3Acollapse?=
+ =?utf-8?q?=22=3E=3Ctr?= class="mld-element"><td align="center"
+ style="Margin:0;padding:0px 0px 10px"><table cellpadding="0" cellspacing="0"
+ class="ml-table-not-adapt ml-smedia"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=22=3E=3Ctbody=3E=3Ctr=3E=3Ctd?=
+ align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a
+ target="_blank" href="#"
+ =?utf-8?q?style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3E=3Cimg_title=3D=22Facebook=22?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-media=2Fblack?=
+ =?utf-8?q?-logos=2Ffacebook=2Epng=22_alt=3D=22Fb=22_width=3D=2224=22_height=3D=2224=22?=
+ =?utf-8?q?_style=3D=22display=3Ablock=3Bborder=3A0=3Boutline=3Anone=3Btext-decoration=3Ano?=
+ =?utf-8?q?ne=3B-ms-interpolation-mode=3Abicubic=22=3E=3C=2Fa=3E=3C=2Ftd=3E=3Ctd?=
+ align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a
+ target="_blank" href="#"
+ =?utf-8?q?style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3E=3Cimg_title=3D=22Twitter=22?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-media=2Fblack?=
+ =?utf-8?q?-logos=2Ftwitter=2Epng=22_alt=3D=22Tw=22_width=3D=2224=22_height=3D=2224=22?=
+ =?utf-8?q?_style=3D=22display=3Ablock=3Bborder=3A0=3Boutline=3Anone=3Btext-decoration=3Ano?=
+ =?utf-8?q?ne=3B-ms-interpolation-mode=3Abicubic=22=3E=3C=2Fa=3E=3C=2Ftd=3E=3Ctd?=
+ align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a
+ target="_blank" href="#"
+ =?utf-8?q?style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3E=3Cimg_title=3D=22Instagram=22?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-media=2Fblack?=
+ =?utf-8?q?-logos=2Finstagram=2Epng=22_alt=3D=22Be=22_width=3D=2224=22_height=3D=2224=22?=
+ =?utf-8?q?_style=3D=22display=3Ablock=3Bborder=3A0=3Boutline=3Anone=3Btext-decoration=3Ano?=
+ =?utf-8?q?ne=3B-ms-interpolation-mode=3Abicubic=22=3E=3C=2Fa=3E=3C=2Ftd=3E=3Ctd?=
+ align="center" valign="top" style="padding:0;Margin:0"><a target="_blank"
+ href="#"
+ =?utf-8?q?style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3E=3Cimg_title=3D=22Youtube=22?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fimg3538c=2Efreshersindia=2Ein=2Fimg=2Fsocial-media=2Fblack?=
+ =?utf-8?q?-logos=2Fyoutube=2Epng=22_alt=3D=22Yt=22_width=3D=2224=22_height=3D=2224=22?=
+ =?utf-8?q?_style=3D=22display=3Ablock=3Bborder=3A0=3Boutline=3Anone=3Btext-decoration=3Ano?=
+ =?utf-8?q?ne=3B-ms-interpolation-mode=3Abicubic=22=3E=3C=2Fa=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Fta?=
+ =?utf-8?q?ble=3E=3C=2Ftd=3E=3C=2Ftr=3E=3Ctr_class=3D=22mld-element=22=3E=3Ctd_align=3D=22left=22?=
+ style="Margin:0;padding:0px"><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bfont-family=3Aarial=2C'he?=
+ =?utf-8?q?lvetica?=
+ =?utf-8?q?_neue'=2Chelvetica=2Csans-serif=3Bfont-size=3A16px=3Bfont-style=3Anormal=3Bf?=
+ =?utf-8?q?ont-weight=3Anormal=3Btext-align=3Acenter=3Bline-height=3A200%=3Bcolor=3A#5?=
+ =?utf-8?q?76e87=22=3E=3Cspan?= style="font-family:arial,'helvetica
+ neue',helvetica,sans-serif"><span style="font-size:12px; line-height:200%">19
+ High St,&nbsp;Hitchin,&nbsp;Hertfordshire,SG5 1HU,</span></span></p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bfont-family=3Aarial=2C'he?=
+ =?utf-8?q?lvetica?=
+ =?utf-8?q?_neue'=2Chelvetica=2Csans-serif=3Bfont-size=3A16px=3Bfont-style=3Anormal=3Bf?=
+ =?utf-8?q?ont-weight=3Anormal=3Btext-align=3Acenter=3Bline-height=3A200%=3Bcolor=3A#5?=
+ =?utf-8?q?76e87=22=3E=3Cspan?= style="font-family:arial,'helvetica
+ neue',helvetica,sans-serif"><span style="font-size:12px;
+ line-height:200%">United Kingdom.</span></span></p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bfont-family=3Aarial=2C'he?=
+ =?utf-8?q?lvetica?=
+ =?utf-8?q?_neue'=2Chelvetica=2Csans-serif=3Bfont-size=3A16px=3Bfont-style=3Anormal=3Bf?=
+ =?utf-8?q?ont-weight=3Anormal=3Btext-align=3Acenter=3Bline-height=3A200%=3Bcolor=3A#5?=
+ =?utf-8?q?76e87=22=3E=3Cspan_style=3D=22font-family=3Aarial=2C'helvetica?=
+ neue',helvetica,sans-serif"><span style="font-size:12px;
+ =?utf-8?q?line-height=3A200%=22=3E=C2=A9?= ddbuilder.com, Inc. All Rights
+ =?utf-8?q?Reserved=2E=3C=2Fspan=3E=3C=2Fspan=3E=3C=2Fp=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbod?=
+ =?utf-8?q?y=3E=3C=2Ftable=3E=3C!--=5Bif_mso=5D=3E=3C=2Ftd=3E=3C!=5Bendif=5D--=3E=3C!--=5Bif?=
+ =?utf-8?q?_mso=5D=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C!=5Bendif=5D--=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E=3C=2Ftd=3E?=
+ =?utf-8?q?=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E?=
+ </div><center style="width: 100%;"><div style="max-width: 680px; margin: 0
+ auto;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"
+ width="100%" style="max-width: 680px;"><tr><td style="padding: 20px;
+ font-family:arial, sans-serif; font-size: 12px; line-height: 24px;
+ text-align: center; color: #888888;"><span></span><span><p
+ style="font-size:12px; color:#373737; margin:0; padding:5px 0 4px 0;
+ text-align:center; font-family:arial;">If you wish to opt out of all type of
+ emails, click <a
+ =?utf-8?q?href=3D'https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fus=2FukayMCahWPHIafAkMKgFfXkd?=
+ =?utf-8?q?sIfMhyafAblCafFMUbWedMszaDlbMBcES'=3EUnsubscribe=2E=3C=2Fa=3E=3C=2Fp=3E=3C=2Fspan?=
+ =?utf-8?q?=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E=3C=2Fcenter=3E=3Cspan_style=3D=22display=3Anone?=
+ !important;" class="preheader"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fopens=2FukayMCahWPHIafAkMKgFfX?=
+ =?utf-8?q?kdsIfMhyafAblCafFMUbWedMszaDlbMBcES=2Fblank=2Egif=22?= alt="open
+ track" width="0" height="0" style="display:none !important;"></span>
+ </body></html>
+Content-Type: multipart/alternative; boundary="=-XiU7YF6wZP/9CUrcpUG+3A=="
+
+--=-XiU7YF6wZP/9CUrcpUG+3A==
+Content-Type: text/plain; charset=utf-8
+
+Good News.. 15 Lakhs Salary Package Waiting for You in TCS This is the Best Chance to get your Job in TCS Company. Just **Upload Your Latest Resume** Here. Company will Send Venue Details and Date of Interview in Confirmation mail **Note: Many people are just uploading CV but they are not completing the registration. You will get interview calls only after the completion of all the steps of registration** All the Best.. ![Fb](https://img3538c.freshersindia.in/img/social-media/black-logos/facebook.png "Facebook")![Tw](https://img3538c.freshersindia.in/img/social-media/black-logos/twitter.png "Twitter")![Be](https://img3538c.freshersindia.in/img/social-media/black-logos/instagram.png "Instagram")![Yt](https://img3538c.freshersindia.in/img/social-media/black-logos/youtube.png "Youtube")19 High St, Hitchin, Hertfordshire,SG5 1HU, United Kingdom. © ddbuilder.com, Inc. All Rights Reserved.
+--=-XiU7YF6wZP/9CUrcpUG+3A==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <0dd432c3-4a8a-4b77-aaa5-e94a01038f80>
+
+Good News.. 15 Lakhs Salary Package Waiting for You in TCS This is the Best =
+Chance to get your Job in TCS Company. Just **Upload Your Latest Resume** He=
+re. Company will Send Venue Details and Date of Interview in Confirmation ma=
+il **Note: Many people are just uploading CV but they are not completing the=
+ registration. You will get interview calls only after the completion of all=
+ the steps of registration** All the Best.. ![Fb](https://img3538c.freshersi=
+ndia.in/img/social-media/black-logos/facebook.png "Facebook")![Tw](https://i=
+mg3538c.freshersindia.in/img/social-media/black-logos/twitter.png "Twitter")=
+![Be](https://img3538c.freshersindia.in/img/social-media/black-logos/instagr=
+am.png "Instagram")![Yt](https://img3538c.freshersindia.in/img/social-media/=
+black-logos/youtube.png "Youtube")19 High St, Hitchin, Hertfordshire,SG5 1HU=
+, United Kingdom. =C2=A9 ddbuilder.com, Inc. All Rights Reserved.
+--=-XiU7YF6wZP/9CUrcpUG+3A==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <5c742b22-923f-4a98-bc5a-c6b55d114f31>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3.o=
+rg/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"> <head> <=
+meta charset=3D"UTF-8"> <meta content=3D"width=3Ddevice-width, initial-scale=
+=3D1" name=3D"viewport"> <meta name=3D"x-apple-disable-message-reformatting"=
+> <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"> <meta content=3D=
+"telephone=3Dno" name=3D"format-detection"> <title>Job Openings in TCS with =
+15 LPA Package and You are eligible to Apply</title> <!--[if (mso 16)]> <sty=
+le type=3D"text/css"> a {text-decoration: none;} </style> <![endif]--> <!--[=
+if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->=
+ <!--[if gte mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG></o:AllowP=
+NG> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml>=
+ <![endif]--> <style type=3D"text/css">@import url("https://img3538c.fresher=
+sindia.in/uploads/fonts.css");</style> <style type=3D"text/css"> .rollover:h=
+over .rollover-first {max-height:0px !important;display:none !important;} .r=
+ollover:hover .rollover-second {max-height:none !important;display:block !im=
+portant;} #outlook a {padding:0;} .ml-button {mso-style-priority:100 !import=
+ant;text-decoration:none;} a[x-apple-data-detectors] {color:inherit !importa=
+nt;text-decoration:none !important;font-size:inherit !important;font-family:=
+inherit !important;font-weight:inherit !important;line-height:inherit !impor=
+tant;} .ml-desk-hidden {display:none;float:left;overflow:hidden;width:0;max-=
+height:0;line-height:0;mso-hide:all;} [data-ogsb] .ml-button {border-width:0=
+ !important;padding:10px 20px 10px 20px !important;} @media only screen and =
+(max-width:600px) { .st-br {padding-left:10px !important;padding-right:10px =
+!important;} p, ul li, ol li, a {line-height:150% !important;} h1 {font-size=
+:30px !important;line-height:150% !important;} h2 {font-size:26px !important=
+;line-height:150% !important;} h3 {font-size:20px !important;line-height:150=
+% !important;} .ml-content-body h1 a {font-size:30px !important;} .ml-conten=
+t-body h2 a {font-size:26px !important;} .ml-content-body h3 a {font-size:20=
+px !important;} .ml-menu td a {font-size:14px !important;} *[class=3D"gmail-=
+fix"] {display:none !important;} .ml-m-txt-c, .ml-m-txt-c h1, .ml-m-txt-c h2=
+, .ml-m-txt-c h3 {text-align:center !important;} .ml-m-txt-r, .ml-m-txt-r h1=
+, .ml-m-txt-r h2, .ml-m-txt-r h3 {text-align:right !important;} .ml-m-txt-l,=
+ .ml-m-txt-l h1, .ml-m-txt-l h2, .ml-m-txt-l h3 {text-align:left !important;=
+} .ml-m-txt-r img, .ml-m-txt-c img, .ml-m-txt-l img {display:inline !importa=
+nt;} .ml-button-border {display:block !important;} a.ml-button, button.ml-bu=
+tton {display:block !important;border-left-width:0px !important;border-right=
+-width:0px !important;} .ml-adaptive table, .ml-left, .ml-right {width:100% =
+!important;} .ml-content table, .ml-content {width:100% !important;max-width=
+:600px !important;} .ml-adapt-td {display:block !important;width:100% !impor=
+tant;} .adapt-img {width:100% !important;height:auto !important;} .ml-m-p0 {=
+padding:0 !important;} .ml-m-p0r {padding-right:0 !important;} .ml-m-p0l {pa=
+dding-left:0 !important;} .ml-m-p0t {padding-top:0 !important;} .ml-m-p0b {p=
+adding-bottom:0 !important;} .ml-m-p20b {padding-bottom:20px !important;} .m=
+l-mobile-hidden, .ml-hidden {display:none !important;} tr.ml-desk-hidden, td=
+.ml-desk-hidden, table.ml-desk-hidden {width:auto !important;overflow:visibl=
+e !important;float:none !important;max-height:inherit !important;line-height=
+:inherit !important;} tr.ml-desk-hidden {display:table-row !important;} tabl=
+e.ml-desk-hidden {display:table !important;} td.ml-desk-menu-hidden {display=
+:table-cell !important;} .ml-menu td {width:1% !important;} table.ml-table-n=
+ot-adapt, .esd-block-html table {width:auto !important;} table.ml-smedia {di=
+splay:inline-block !important;} table.ml-smedia td {display:inline-block !im=
+portant;} } </style> <!--[if gte mso 12]> <style type=3D"text/css"> .mso-rig=
+ht { padding-left: 20px; } </style> <![endif]--></head><body style=3D";width=
+:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-s=
+ize-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0"> <div style=3D=
+"width:100%"><div bgcolor=3D"#F2F6F8" class=3D"ml-wrapper-color" style=3D"ba=
+ckground-color: #f2f6f8;"><!--[if gte mso 9]> <v:background xmlns:v=3D"urn:s=
+chemas-microsoft-com:vml" fill=3D"t"> <v:fill type=3D"tile" color=3D"#f2f6f8=
+"></v:fill> </v:background> <![endif]--><table cellspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation" width=3D"100%" bgcolor=3D"#f2f6f8" class=3D"ml-=
+wrapper" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:=
+collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%"><tr><=
+td valign=3D"top" class=3D"mld-email-paddings" style=3D"padding:0;Margin:0">=
+<table cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" width=3D"10=
+0%" align=3D"center" class=3D"ml-content" style=3D"mso-table-lspace:0pt;mso-=
+table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fi=
+xed !important;width:100%"><tbody><tr><td align=3D"center" style=3D"Margin:0=
+;padding:0px"><table cellspacing=3D"0" cellpadding=3D"0" role=3D"presentatio=
+n" align=3D"center" width=3D"600" class=3D"ml-content-body" style=3D"mso-tab=
+le-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0=
+px;width:600px"><tbody><tr ><td align=3D"left" bgcolor=3D"#FFFFFF" class=3D"=
+mld-structure" style=3D"Margin:0;background-color:#ffffff;padding:40px"><!--=
+[if mso]><table style=3D"width:520px" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><![endif]--><!--[if mso]><td style=3D"width:520px" valign=3D"top"><![endif=
+]--><table cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" align=3D=
+"left" class=3D"ml-left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;=
+border-collapse:collapse;border-spacing:0px;float:left"><tbody><tr class=3D"=
+mld-container"><td align=3D"center" valign=3D"top" class=3D"ml-m-p20b" style=
+=3D"Margin:0;margin:0px;padding:0px;width:520px"><table cellspacing=3D"0" ce=
+llpadding=3D"0" role=3D"presentation" width=3D"100%" style=3D"mso-table-lspa=
+ce:0pt;mso-table-rspace:0pt;border-spacing:0px;padding:0px;border-radius:0px=
+;border-collapse:collapse"><tr class=3D"mld-element"><td align=3D"left" styl=
+e=3D"Margin:0;padding:0px 0px 20px"><p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-heigh=
+t:150%;font-size:16px;font-style:normal;font-weight:normal;color:#22364c;fon=
+t-family:'verdana',geneva,sans-serif">Good News..</p><p style=3D"Margin:0;-w=
+ebkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;line-height:150%;font-size:16px;font-style:normal;font-weight:normal;=
+color:#22364c;font-family:'verdana',geneva,sans-serif">&nbsp;</p><p style=3D=
+"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-h=
+eight-rule:exactly;line-height:150%;font-size:16px;font-style:normal;font-we=
+ight:normal;color:#22364c;font-family:'verdana',geneva,sans-serif">15 Lakhs =
+Salary Package Waiting for You in TCS</p><p style=3D"Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-=
+height:150%;font-size:16px;font-style:normal;font-weight:normal;color:#22364=
+c;font-family:'verdana',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-w=
+ebkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;line-height:150%;font-size:16px;font-style:normal;font-weight:normal;=
+color:#22364c;font-family:'verdana',geneva,sans-serif">This is the Best Chan=
+ce to get your Job&nbsp;in TCS Company.</p><p style=3D"Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;lin=
+e-height:150%;font-size:16px;font-style:normal;font-weight:normal;color:#223=
+64c;font-family:'verdana',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;=
+-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule=
+:exactly;line-height:150%;font-size:16px;font-style:normal;font-weight:norma=
+l;color:#22364c;font-family:'verdana',geneva,sans-serif">Just <strong><a tar=
+get=3D"_blank"  href=3D"https://mc.freshersindia.in/links/ukayMCahWPHIafAkMK=
+gFfXkdsIfMhyafAblCafFMUbWedMszaDlbMBcES/1260498" style=3D"-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-deco=
+ration:underline;color:#1376c8">Upload Your Latest Resume</a></strong> Here.=
+ Company will Send Venue Details and Date of Interview&nbsp;in Confirmation =
+mail</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adj=
+ust:none;mso-line-height-rule:exactly;line-height:150%;font-size:16px;font-s=
+tyle:normal;font-weight:normal;color:#22364c;font-family:'verdana',geneva,sa=
+ns-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;font-size=
+:16px;font-style:normal;font-weight:normal;color:#22364c;font-family:'verdan=
+a',geneva,sans-serif"><strong>Note: Many people are just uploading CV but th=
+ey are not completing the registration. You will get interview calls only af=
+ter the completion of all the steps of registration</strong></p><p style=3D"=
+Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-he=
+ight-rule:exactly;line-height:150%;font-size:16px;font-style:normal;font-wei=
+ght:normal;color:#22364c;font-family:'verdana',geneva,sans-serif">&nbsp;</p>=
+<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none=
+;mso-line-height-rule:exactly;line-height:150%;font-size:16px;font-style:nor=
+mal;font-weight:normal;color:#22364c;font-family:'verdana',geneva,sans-serif=
+">All the Best..</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;font-size=
+:16px;font-style:normal;font-weight:normal;color:#22364c;font-family:'verdan=
+a',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ar=
+ial,'helvetica neue',helvetica,sans-serif;line-height:150%;font-size:16px;fo=
+nt-style:normal;font-weight:normal;color:#22364c">&nbsp;</p></td></tr></tabl=
+e></td></tr></tbody></table><!--[if mso]></td><![endif]--><!--[if mso]></tr>=
+</table><![endif]--></td></tr><tr ><td align=3D"left" bgcolor=3D"#F2F5F8" cl=
+ass=3D"mld-structure" style=3D"Margin:0;background-color:#f2f5f8;padding:40p=
+x"><!--[if mso]><table style=3D"width:520px" cellpadding=3D"0" cellspacing=3D=
+"0"><tr><![endif]--><!--[if mso]><td style=3D"width:520px" valign=3D"top"><!=
+[endif]--><table cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" a=
+lign=3D"left" class=3D"ml-left" style=3D"mso-table-lspace:0pt;mso-table-rspa=
+ce:0pt;border-collapse:collapse;border-spacing:0px;float:left"><tbody><tr cl=
+ass=3D"mld-container"><td align=3D"center" valign=3D"top" class=3D"ml-m-p20b=
+" style=3D"Margin:0;margin:0px;padding:0px;width:520px"><table cellspacing=3D=
+"0" cellpadding=3D"0" role=3D"presentation" width=3D"100%" style=3D"mso-tabl=
+e-lspace:0pt;mso-table-rspace:0pt;border-spacing:0px;padding:0px;border-radi=
+us:0px;border-collapse:collapse"><tr class=3D"mld-element"><td align=3D"cent=
+er" style=3D"Margin:0;padding:0px 0px 10px"><table cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"ml-table-not-adapt ml-smedia" style=3D"mso-table-lspace:=
+0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tbody=
+><tr><td align=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;padding=
+-right:10px"><a target=3D"_blank" href=3D"#" style=3D"-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decorati=
+on:underline;color:#1376c8"><img title=3D"Facebook" src=3D"https://img3538c.=
+freshersindia.in/img/social-media/black-logos/facebook.png" alt=3D"Fb" width=
+=3D"24" height=3D"24" style=3D"display:block;border:0;outline:none;text-deco=
+ration:none;-ms-interpolation-mode:bicubic"></a></td><td align=3D"center" va=
+lign=3D"top" style=3D"padding:0;Margin:0;padding-right:10px"><a target=3D"_b=
+lank" href=3D"#" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;text-decoration:underline;color:#1376c8">=
+<img title=3D"Twitter" src=3D"https://img3538c.freshersindia.in/img/social-m=
+edia/black-logos/twitter.png" alt=3D"Tw" width=3D"24" height=3D"24" style=3D=
+"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-=
+mode:bicubic"></a></td><td align=3D"center" valign=3D"top" style=3D"padding:=
+0;Margin:0;padding-right:10px"><a target=3D"_blank" href=3D"#" style=3D"-web=
+kit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exa=
+ctly;text-decoration:underline;color:#1376c8"><img title=3D"Instagram" src=3D=
+"https://img3538c.freshersindia.in/img/social-media/black-logos/instagram.pn=
+g" alt=3D"Be" width=3D"24" height=3D"24" style=3D"display:block;border:0;out=
+line:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td><td =
+align=3D"center" valign=3D"top" style=3D"padding:0;Margin:0"><a target=3D"_b=
+lank" href=3D"#" style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;text-decoration:underline;color:#1376c8">=
+<img title=3D"Youtube" src=3D"https://img3538c.freshersindia.in/img/social-m=
+edia/black-logos/youtube.png" alt=3D"Yt" width=3D"24" height=3D"24" style=3D=
+"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-=
+mode:bicubic"></a></td></tr></tbody></table></td></tr><tr class=3D"mld-eleme=
+nt"><td align=3D"left" style=3D"Margin:0;padding:0px"><p style=3D"Margin:0;-=
+webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:=
+exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:16=
+px;font-style:normal;font-weight:normal;text-align:center;line-height:200%;c=
+olor:#576e87"><span style=3D"font-family:arial,'helvetica neue',helvetica,sa=
+ns-serif"><span style=3D"font-size:12px; line-height:200%">19 High St,&nbsp;=
+Hitchin,&nbsp;Hertfordshire,SG5 1HU,</span></span></p><p style=3D"Margin:0;-=
+webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:=
+exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:16=
+px;font-style:normal;font-weight:normal;text-align:center;line-height:200%;c=
+olor:#576e87"><span style=3D"font-family:arial,'helvetica neue',helvetica,sa=
+ns-serif"><span style=3D"font-size:12px; line-height:200%">United Kingdom.</=
+span></span></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-=
+size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica n=
+eue',helvetica,sans-serif;font-size:16px;font-style:normal;font-weight:norma=
+l;text-align:center;line-height:200%;color:#576e87"><span style=3D"font-fami=
+ly:arial,'helvetica neue',helvetica,sans-serif"><span style=3D"font-size:12p=
+x; line-height:200%">=C2=A9 ddbuilder.com, Inc. All Rights Reserved.</span><=
+/span></p></td></tr></table></td></tr></tbody></table><!--[if mso]></td><![e=
+ndif]--><!--[if mso]></tr></table><![endif]--></td></tr></tbody></table></td=
+></tr></tbody></table></td></tr></table></div> </div><center style=3D"width:=
+ 100%;"><div style=3D"max-width: 680px; margin: 0 auto;"><table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" st=
+yle=3D"max-width: 680px;"><tr><td style=3D"padding: 20px; font-family:arial,=
+ sans-serif; font-size: 12px; line-height: 24px; text-align: center; color: =
+#888888;"><span></span><span><p style=3D"font-size:12px; color:#373737; marg=
+in:0; padding:5px 0 4px 0; text-align:center; font-family:arial;">If you wis=
+h to opt out of all type of emails, click <a href=3D'https://mc.freshersindi=
+a.in/us/ukayMCahWPHIafAkMKgFfXkdsIfMhyafAblCafFMUbWedMszaDlbMBcES'>Unsubscri=
+be.</a></p></span></td></tr></table></div></center><span style=3D"display:no=
+ne !important;" class=3D"preheader"><img src=3D"https://mc.freshersindia.in/=
+opens/ukayMCahWPHIafAkMKgFfXkdsIfMhyafAblCafFMUbWedMszaDlbMBcES/blank.gif" a=
+lt=3D"open track" width=3D"0" height=3D"0" style=3D"display:none !important;=
+"></span> </body></html>
+--=-XiU7YF6wZP/9CUrcpUG+3A==--

@@ -1,0 +1,465 @@
+Delivered-To: sathishkapoor8696@gmail.com
+Received: from mail.cb1155.mlrctk.com (mail.cb1155.mlrctk.com. [103.197.16.155])
+	by mx.google.com with ESMTPS
+	id t21-20020ab05515000000b0078f3bbc1d0asi360802uaa
+	.23.2023.06.16.21.15.09        for
+	<sathishkapoor8696@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+	Fri, 16 Jun 2023 21:15:10 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ7j8WB0AfGzkO7D0sw/j1tQnki3ouv7BYqAh0U8lGnJeD/NMau6gAZQspKEXYt2DetffDjm
+X-Received: by 2002:ac8:5a4d:0:b0:3f8:4905:9532 with SMTP id
+ o13-20020ac85a4d000000b003f849059532mr5088140qta.65.1686975310107;       
+ Fri, 16 Jun 2023 21:15:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1686975310; cv=none; d=google.com;
+	s=arc-20160816;
+	b=EBkJcaEC9/61yFLJ7YMdoQQOh5bHBg8YeWD9SDedxVD8GGicbpEq3w21fdgpsppwzRZDMkooKCZ
+	Z9tMXKyKDmc9dPGmYuvAh15NkhlmWGySWIntNUvg/WC1ynSIHeaizLsFtWC1zLcGw8gvMQ7rv36oQ
+	cTFf/o4vqxHe0fkKOqblmz/cYAdD6u0PpNOiBIelerfZ1r1MVFpGlyu+I+eD0qZRcraX0snv1/HXX
+	EH4Pa2Bxql12iHBQiIqAxPUcgxsPLLtdXyMYogmPfBiW2+2Ds9tZddGiHRtNa4nQuwXPsn6SfmH0j
+	8AcCCWfvXm2EcYrlFm6U0qOVMHnVqnyqa3sA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=mime-version:feedback-id:list-unsubscribe-post:list-unsubscribe:reply-to:
+	to:from:subject:message-id:date:dkim-signature:dkim-signature;
+	bh=B9PM8c9Sa2p0mpg11Cl2S6GKOg3Q6IzwoLfbu7MS9gs=;
+	b=CsvhKbeKSSUmU4/B1AmZBcsGDgYjK9XqQAyCf4Mx5vL5nwpJZkJf6CHFvahjUpCxIZIjELCJ2ZM
+	o6RbotuEJtfKUVboSguPfYK5NZ3B1f6Va677m+B2ykQkkQlC3izVc7kquxBQLwiYgVrVbbjhQFLel
+	IYBcjEn4z7+ns466KZN//fTiXQQ2rVFSj+dV+Z48V6DxxFJ9aZg2zhbfdQ24mvSVSq0xMwG669Wd8
+	5MHlX4MfP3E/CH7h+aGTVDfvaIMohBO4DswDeTu0f/iPmhJZ11ZcLpXMcmnR9lZmVkDST/fNx5PN5
+	WNpFDKxXsncmR73DbhQ3bICaW9yxR7ta3TQA==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@freshersindia.in header.s=k1 header.b=YN91lNFu;
+	dkim=pass header.i=@mlrct.com header.s=k1 header.b=E1dBoylX; spf=pass
+	(google.com: domain of bounce.cli3108-780521-780521-1655713285-2056-4031-31643-66-p1242@mc.freshersindia.in designates 103.197.16.155 as permitted sender)
+	smtp.mailfrom=
+	bounce.cli3108-780521-780521-1655713285-2056-4031-31643-66-p1242@mc.freshersindia.in;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=freshersindia.in
+Return-Path: =?utf-8?q?=3Cbounce=2Ecli3108-780521-780521-1655713285-2056-4031-31643-66-p?=
+ =?utf-8?q?1242=40mc=2Efreshersindia=2Ein=3E?=
+Received-SPF: pass (google.com: domain of
+ =?utf-8?q?bounce=2Ecli3108-780521-780521-1655713285-2056-4031-31643-66-p1?=
+ =?utf-8?q?242=40mc=2Efreshersindia=2Ein?= designates 103.197.16.155 as
+ permitted sender) client-ip=103.197.16.155;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@freshersindia.in header.s=k1 header.b=YN91lNFu;
+	dkim=pass header.i=@mlrct.com header.s=k1 header.b=E1dBoylX; spf=pass
+	(google.com: domain of bounce.cli3108-780521-780521-1655713285-2056-4031-31643-66-p1242@mc.freshersindia.in designates 103.197.16.155 as permitted sender)
+	smtp.mailfrom=
+	bounce.cli3108-780521-780521-1655713285-2056-4031-31643-66-p1242@mc.freshersindia.in;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=freshersindia.in
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; s=k1;
+	d=mlrct.com; t=1686975253; h=subject:from:to;
+	bh=B9PM8c9Sa2p0mpg11Cl2S6GKOg3Q6IzwoLfbu7MS9gs=;
+	b=E1dBoylX4bUej0wji9cadnuKdtlvMettNasIgImVf6rct3nNxlbxs0nghOP0YZZMU2u92GqbhgO
+	1C7sZ306QvrylrzxQ1KziucwGWwwswjMLcfZ2FxbHsxYmhTH4taXBqiBZOykYzyVtYnPES5/P+F/m
+	eU//HltI3IsxZRXx6lCwzQEJ/P2hQL4eepYbChQq22tzi6ch5p3If8tmgOKXtbhzScpAWuGwdEpaX
+	3BCPw05E90fdoCy96WryoJBgOH5dZX6gkV3M/qQrd0NWe+uDBZkeKnU5WuigDYy6rEqSGP2oSuSTe
+	h3e0zjXsCoLJfMneDFfOW+WSrSLqEc5lSo5A==
+Date: Sat, 17 Jun 2023 04:14:13 +0000
+Message-ID: <1686975253-MTY1NTcxMzI4NS03ODA1MjE@mc.freshersindia.in>
+Subject: 15 Lakh Package [YOU ARE SELECTED] and you are eligible to Apply
+From: Babita HR <sanjoli.raj@freshersindia.in>
+To: sathishkapoor8696@gmail.com
+Reply-To: sanjoli.raj@freshersindia.in
+List-Unsubscribe: =?utf-8?q?=3Chttps=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fus=2FuBAYncaxWRxiaFsBMbWFfhbuSIFMH?=
+ =?utf-8?q?yAfskqCaFwMdkWEuMcZauMkMbCEC=3E=2C?=
+ =?utf-8?q?_=3Cmailto=3Aunsub=2Ecli3108-780521-780521-1655713285-2056-4031-3164?=
+ =?utf-8?q?3-66-p1242=40mc=2Efreshersindia=2Ein=3Fsubject=3Dunsubscribe=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-campaignid: 780521
+X-SentFromServer: 103.197.16.155
+X-Subscriber-ID: 1655713285
+Feedback-ID: 3667:1655713285:3108:freshersin
+MIME-Version: 1.0
+Uid: 1
+Folder: UIPATH Testing 2
+Sender: Babita HR <sanjoli.raj@freshersindia.in>
+PlainText: Hi sathish Good News, You are Selected for Personal Interview.
+ Don't Miss it Just Upload your Latest Resume and Register in Below Link.
+ after Completion of your Registration Company will send confirmation Mail.
+ **Your Personal Interview Schedule Here** **Note: Many people are just
+ uploading CV but they are not completing the registration. You will get
+ interview calls only after the completion of all the steps of registration**
+ Best Regards, Babita HR
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+ xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"> <head> <meta
+ charset="UTF-8"> <meta content="width=device-width, initial-scale=1"
+ name="viewport"> <meta name="x-apple-disable-message-reformatting"> <meta
+ http-equiv="X-UA-Compatible" content="IE=edge"> <meta content="telephone=no"
+ name="format-detection"> <title>15 Lakh Package [YOU ARE SELECTED] and you
+ are eligible to Apply</title> <!--[if (mso 16)]> <style type="text/css"> a
+ {text-decoration: none;} </style> <![endif]--> <!--[if gte mso 9]><style>sup
+ { font-size: 100% !important; }</style><![endif]--> <!--[if gte mso 9]> <xml>
+ <o:OfficeDocumentSettings> <o:AllowPNG></o:AllowPNG>
+ <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml>
+ <![endif]--> <style type="text/css">@import
+ url("https://img3538c.freshersindia.in/uploads/fonts.css");</style> <style
+ type="text/css"> .rollover:hover .rollover-first {max-height:0px
+ !important;display:none !important;} .rollover:hover .rollover-second
+ {max-height:none !important;display:block !important;} #outlook a
+ {padding:0;} .ml-button {mso-style-priority:100
+ !important;text-decoration:none;} a[x-apple-data-detectors] {color:inherit
+ !important;text-decoration:none !important;font-size:inherit
+ !important;font-family:inherit !important;font-weight:inherit
+ !important;line-height:inherit !important;} .ml-desk-hidden
+ =?utf-8?q?{display=3Anone=3Bfloat=3Aleft=3Boverflow=3Ahidden=3Bwidth=3A0=3Bmax-height=3A0?=
+ =?utf-8?q?=3Bline-height=3A0=3Bmso-hide=3Aall=3B}?= [data-ogsb] .ml-button
+ {border-width:0 !important;padding:10px 20px 10px 20px !important;} @media
+ only screen and (max-width:600px) { .st-br {padding-left:10px
+ !important;padding-right:10px !important;} p, ul li, ol li, a
+ {line-height:150% !important;} h1 {font-size:30px !important;line-height:150%
+ !important;} h2 {font-size:26px !important;line-height:150% !important;} h3
+ {font-size:20px !important;line-height:150% !important;} .ml-content-body h1
+ a {font-size:30px !important;} .ml-content-body h2 a {font-size:26px
+ !important;} .ml-content-body h3 a {font-size:20px !important;} .ml-menu td a
+ {font-size:14px !important;} *[class="gmail-fix"] {display:none !important;}
+ .ml-m-txt-c, .ml-m-txt-c h1, .ml-m-txt-c h2, .ml-m-txt-c h3
+ {text-align:center !important;} .ml-m-txt-r, .ml-m-txt-r h1, .ml-m-txt-r h2,
+ .ml-m-txt-r h3 {text-align:right !important;} .ml-m-txt-l, .ml-m-txt-l h1,
+ .ml-m-txt-l h2, .ml-m-txt-l h3 {text-align:left !important;} .ml-m-txt-r img,
+ .ml-m-txt-c img, .ml-m-txt-l img {display:inline !important;}
+ .ml-button-border {display:block !important;} a.ml-button, button.ml-button
+ {display:block !important;border-left-width:0px
+ !important;border-right-width:0px !important;} .ml-adaptive table, .ml-left,
+ .ml-right {width:100% !important;} .ml-content table, .ml-content {width:100%
+ !important;max-width:600px !important;} .ml-adapt-td {display:block
+ !important;width:100% !important;} .adapt-img {width:100%
+ !important;height:auto !important;} .ml-m-p0 {padding:0 !important;}
+ .ml-m-p0r {padding-right:0 !important;} .ml-m-p0l {padding-left:0
+ !important;} .ml-m-p0t {padding-top:0 !important;} .ml-m-p0b
+ {padding-bottom:0 !important;} .ml-m-p20b {padding-bottom:20px !important;}
+ .ml-mobile-hidden, .ml-hidden {display:none !important;} tr.ml-desk-hidden,
+ td.ml-desk-hidden, table.ml-desk-hidden {width:auto
+ !important;overflow:visible !important;float:none
+ !important;max-height:inherit !important;line-height:inherit !important;}
+ tr.ml-desk-hidden {display:table-row !important;} table.ml-desk-hidden
+ {display:table !important;} td.ml-desk-menu-hidden {display:table-cell
+ !important;} .ml-menu td {width:1% !important;} table.ml-table-not-adapt,
+ .esd-block-html table {width:auto !important;} table.ml-smedia
+ {display:inline-block !important;} table.ml-smedia td {display:inline-block
+ !important;} } </style> <!--[if gte mso 12]> <style type="text/css">
+ .mso-right { padding-left: 20px; } </style> <![endif]--></head><body
+ style=";width:100%;font-family:arial,'helvetica
+ =?utf-8?q?neue'=2Chelvetica=2Csans-serif=3B-webkit-text-size-adjust=3A100%=3B-ms-?=
+ =?utf-8?q?text-size-adjust=3A100%=3Bpadding=3A0=3BMargin=3A0=22=3E?= <div
+ style="width:100%"><div bgcolor="#F2F6F8" class="ml-wrapper-color"
+ style="background-color: #f2f6f8;"><!--[if gte mso 9]> <v:background
+ xmlns:v="urn:schemas-microsoft-com:vml" fill="t"> <v:fill type="tile"
+ color="#f2f6f8"></v:fill> </v:background> <![endif]--><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%" bgcolor="#f2f6f8"
+ class="ml-wrapper"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bpadding=3A0=3BMargin=3A0=3Bwidth=3A100%?=
+ =?utf-8?q?=3Bheight=3A100%=22=3E=3Ctr=3E=3Ctd?= valign="top"
+ class="mld-email-paddings" style="padding:0;Margin:0"><table cellspacing="0"
+ cellpadding="0" role="presentation" width="100%" align="center"
+ class="ml-content"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Btable-layout=3Afixed?=
+ !important;width:100%"><tbody><tr><td align="center"
+ style="Margin:0;padding:0px"><table cellspacing="0" cellpadding="0"
+ role="presentation" align="center" width="100%" class="ml-content-body"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bwidth=3A100%=22=3E=3Ctbody=3E=3Ctr?=
+ ><td align="left" class="mld-structure" style="Margin:0;padding:20px"><table
+ cellspacing="0" cellpadding="0" role="presentation" align="left" width="100%"
+ class="ml-left"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-colla?=
+ =?utf-8?q?pse=3Acollapse=3Bborder-spacing=3A0px=3Bfloat=3Aleft=3Bwidth=3A100%=22=3E=3Ctbody?=
+ =?utf-8?q?=3E=3Ctr?= class="mld-container"><td align="center" valign="top"
+ class="ml-m-p20b" style="Margin:0;margin:0px;padding:0px;width:100%"><table
+ cellspacing="0" cellpadding="0" role="presentation" width="100%"
+ =?utf-8?q?style=3D=22mso-table-lspace=3A0pt=3Bmso-table-rspace=3A0pt=3Bborder-spaci?=
+ =?utf-8?q?ng=3A0px=3Bpadding=3A0px=3Bborder-radius=3A0px=3Bborder-collapse=3Acollapse?=
+ =?utf-8?q?=22=3E=3Ctr_class=3D=22mld-element=22=3E=3Ctd_align=3D=22left=22?=
+ style="Margin:0;padding:0px"><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EHi&nbsp=3Bsathish=3C=2Fp=3E?=
+ =?utf-8?q?=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EGood?= News,
+ You are Selected for Personal Interview.&nbsp;Don't Miss it</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EJust?= Upload
+ your Latest Resume and Register in Below Link. after Completion of your
+ Registration Company will send confirmation Mail.</p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E=3Cstrong=3E=3Ca?=
+ target="_blank" 
+ =?utf-8?q?href=3D=22https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Flinks=2FuBAYncaxWRxiaFsBMbWFf?=
+ =?utf-8?q?hbuSIFMHyAfskqCaFwMdkWEuMcZauMkMbCEC=2F1260492=22?=
+ =?utf-8?q?_style=3D=22-webkit-text-size-adjust=3Anone=3B-ms-text-size-adjust=3Anon?=
+ =?utf-8?q?e=3Bmso-line-height-rule=3Aexactly=3Btext-decoration=3Aunderline=3Bcolo?=
+ =?utf-8?q?r=3A#1376c8=22=3EYour?= Personal Interview Schedule
+ Here</a>&nbsp;</strong></p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E=3Cstrong=3E=3Cspan?=
+ style="color:#c0392b">Note:</span> Many people are just uploading CV but they
+ are not completing the registration. You will get interview calls only after
+ the completion of all the steps of registration</strong></p><p
+ =?utf-8?q?style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EBest_Regards=2C=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3EBabita_HR=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3Cp?=
+ =?utf-8?q?_style=3D=22Margin=3A0=3B-webkit-text-size-adjust=3Anone=3B-ms-text-size-a?=
+ =?utf-8?q?djust=3Anone=3Bmso-line-height-rule=3Aexactly=3Bline-height=3A150%=3Bfont?=
+ =?utf-8?q?-size=3A16px=3Bcolor=3A#333333=3Bfont-style=3Anormal=3Bfont-weight=3Anormal?=
+ =?utf-8?q?=3Bfont-family=3A'verdana'=2Cgeneva=2Csans-serif=22=3E&nbsp=3B=3C=2Fp=3E=3C=2Ftd=3E=3C=2Ftr?=
+ =?utf-8?q?=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E?=
+ =?utf-8?q?=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftbody=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E?=
+ </div><center style="width: 100%;"><div style="max-width: 680px; margin: 0
+ auto;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"
+ width="100%" style="max-width: 680px;"><tr><td style="padding: 20px;
+ font-family:arial, sans-serif; font-size: 12px; line-height: 24px;
+ text-align: center; color: #888888;"><span></span><span><p
+ style="font-size:12px; color:#373737; margin:0; padding:5px 0 4px 0;
+ text-align:center; font-family:arial;">If you wish to opt out of all type of
+ emails, click <a
+ =?utf-8?q?href=3D'https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fus=2FuBAYncaxWRxiaFsBMbWFfhbu?=
+ =?utf-8?q?SIFMHyAfskqCaFwMdkWEuMcZauMkMbCEC'=3EUnsubscribe=2E=3C=2Fa=3E=3C=2Fp=3E=3C=2Fspan?=
+ =?utf-8?q?=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E=3C=2Fcenter=3E=3Cspan_style=3D=22display=3Anone?=
+ !important;" class="preheader"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fmc=2Efreshersindia=2Ein=2Fopens=2FuBAYncaxWRxiaFsBMbWFfh?=
+ =?utf-8?q?buSIFMHyAfskqCaFwMdkWEuMcZauMkMbCEC=2Fblank=2Egif=22?= alt="open
+ track" width="0" height="0" style="display:none !important;"></span>
+ </body></html>
+Content-Type: multipart/alternative; boundary="=-V1FbV2gvJ3WTX/VyfNVAoQ=="
+
+--=-V1FbV2gvJ3WTX/VyfNVAoQ==
+Content-Type: text/plain; charset=us-ascii
+
+Hi sathish Good News, You are Selected for Personal Interview. Don't Miss it Just Upload your Latest Resume and Register in Below Link. after Completion of your Registration Company will send confirmation Mail. **Your Personal Interview Schedule Here** **Note: Many people are just uploading CV but they are not completing the registration. You will get interview calls only after the completion of all the steps of registration** Best Regards, Babita HR
+--=-V1FbV2gvJ3WTX/VyfNVAoQ==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <6093f6f8-315f-4826-b58a-4cdd39bf6038>
+
+Hi sathish Good News, You are Selected for Personal Interview. Don't Miss it=
+ Just Upload your Latest Resume and Register in Below Link. after Completion=
+ of your Registration Company will send confirmation Mail. **Your Personal I=
+nterview Schedule Here** **Note: Many people are just uploading CV but they =
+are not completing the registration. You will get interview calls only after=
+ the completion of all the steps of registration** Best Regards, Babita HR
+--=-V1FbV2gvJ3WTX/VyfNVAoQ==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <d267d567-9ead-40e6-954e-5527115428ff>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3.o=
+rg/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"> <head> <=
+meta charset=3D"UTF-8"> <meta content=3D"width=3Ddevice-width, initial-scale=
+=3D1" name=3D"viewport"> <meta name=3D"x-apple-disable-message-reformatting"=
+> <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"> <meta content=3D=
+"telephone=3Dno" name=3D"format-detection"> <title>15 Lakh Package [YOU ARE =
+SELECTED] and you are eligible to Apply</title> <!--[if (mso 16)]> <style ty=
+pe=3D"text/css"> a {text-decoration: none;} </style> <![endif]--> <!--[if gt=
+e mso 9]><style>sup { font-size: 100% !important; }</style><![endif]--> <!--=
+[if gte mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG></o:AllowPNG> <=
+o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> <![e=
+ndif]--> <style type=3D"text/css">@import url("https://img3538c.freshersindi=
+a.in/uploads/fonts.css");</style> <style type=3D"text/css"> .rollover:hover =
+.rollover-first {max-height:0px !important;display:none !important;} .rollov=
+er:hover .rollover-second {max-height:none !important;display:block !importa=
+nt;} #outlook a {padding:0;} .ml-button {mso-style-priority:100 !important;t=
+ext-decoration:none;} a[x-apple-data-detectors] {color:inherit !important;te=
+xt-decoration:none !important;font-size:inherit !important;font-family:inher=
+it !important;font-weight:inherit !important;line-height:inherit !important;=
+} .ml-desk-hidden {display:none;float:left;overflow:hidden;width:0;max-heigh=
+t:0;line-height:0;mso-hide:all;} [data-ogsb] .ml-button {border-width:0 !imp=
+ortant;padding:10px 20px 10px 20px !important;} @media only screen and (max-=
+width:600px) { .st-br {padding-left:10px !important;padding-right:10px !impo=
+rtant;} p, ul li, ol li, a {line-height:150% !important;} h1 {font-size:30px=
+ !important;line-height:150% !important;} h2 {font-size:26px !important;line=
+-height:150% !important;} h3 {font-size:20px !important;line-height:150% !im=
+portant;} .ml-content-body h1 a {font-size:30px !important;} .ml-content-bod=
+y h2 a {font-size:26px !important;} .ml-content-body h3 a {font-size:20px !i=
+mportant;} .ml-menu td a {font-size:14px !important;} *[class=3D"gmail-fix"]=
+ {display:none !important;} .ml-m-txt-c, .ml-m-txt-c h1, .ml-m-txt-c h2, .ml=
+-m-txt-c h3 {text-align:center !important;} .ml-m-txt-r, .ml-m-txt-r h1, .ml=
+-m-txt-r h2, .ml-m-txt-r h3 {text-align:right !important;} .ml-m-txt-l, .ml-=
+m-txt-l h1, .ml-m-txt-l h2, .ml-m-txt-l h3 {text-align:left !important;} .ml=
+-m-txt-r img, .ml-m-txt-c img, .ml-m-txt-l img {display:inline !important;} =
+.ml-button-border {display:block !important;} a.ml-button, button.ml-button =
+{display:block !important;border-left-width:0px !important;border-right-widt=
+h:0px !important;} .ml-adaptive table, .ml-left, .ml-right {width:100% !impo=
+rtant;} .ml-content table, .ml-content {width:100% !important;max-width:600p=
+x !important;} .ml-adapt-td {display:block !important;width:100% !important;=
+} .adapt-img {width:100% !important;height:auto !important;} .ml-m-p0 {paddi=
+ng:0 !important;} .ml-m-p0r {padding-right:0 !important;} .ml-m-p0l {padding=
+-left:0 !important;} .ml-m-p0t {padding-top:0 !important;} .ml-m-p0b {paddin=
+g-bottom:0 !important;} .ml-m-p20b {padding-bottom:20px !important;} .ml-mob=
+ile-hidden, .ml-hidden {display:none !important;} tr.ml-desk-hidden, td.ml-d=
+esk-hidden, table.ml-desk-hidden {width:auto !important;overflow:visible !im=
+portant;float:none !important;max-height:inherit !important;line-height:inhe=
+rit !important;} tr.ml-desk-hidden {display:table-row !important;} table.ml-=
+desk-hidden {display:table !important;} td.ml-desk-menu-hidden {display:tabl=
+e-cell !important;} .ml-menu td {width:1% !important;} table.ml-table-not-ad=
+apt, .esd-block-html table {width:auto !important;} table.ml-smedia {display=
+:inline-block !important;} table.ml-smedia td {display:inline-block !importa=
+nt;} } </style> <!--[if gte mso 12]> <style type=3D"text/css"> .mso-right { =
+padding-left: 20px; } </style> <![endif]--></head><body style=3D";width:100%=
+;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-size-a=
+djust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0"> <div style=3D"widt=
+h:100%"><div bgcolor=3D"#F2F6F8" class=3D"ml-wrapper-color" style=3D"backgro=
+und-color: #f2f6f8;"><!--[if gte mso 9]> <v:background xmlns:v=3D"urn:schema=
+s-microsoft-com:vml" fill=3D"t"> <v:fill type=3D"tile" color=3D"#f2f6f8"></v=
+:fill> </v:background> <![endif]--><table cellspacing=3D"0" cellpadding=3D"0=
+" role=3D"presentation" width=3D"100%" bgcolor=3D"#f2f6f8" class=3D"ml-wrapp=
+er" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:colla=
+pse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%"><tr><td va=
+lign=3D"top" class=3D"mld-email-paddings" style=3D"padding:0;Margin:0"><tabl=
+e cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" width=3D"100%" a=
+lign=3D"center" class=3D"ml-content" style=3D"mso-table-lspace:0pt;mso-table=
+-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !=
+important;width:100%"><tbody><tr><td align=3D"center" style=3D"Margin:0;padd=
+ing:0px"><table cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" al=
+ign=3D"center" width=3D"100%" class=3D"ml-content-body" style=3D"mso-table-l=
+space:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;w=
+idth:100%"><tbody><tr ><td align=3D"left" class=3D"mld-structure" style=3D"M=
+argin:0;padding:20px"><table cellspacing=3D"0" cellpadding=3D"0" role=3D"pre=
+sentation" align=3D"left" width=3D"100%" class=3D"ml-left" style=3D"mso-tabl=
+e-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0p=
+x;float:left;width:100%"><tbody><tr class=3D"mld-container"><td align=3D"cen=
+ter" valign=3D"top" class=3D"ml-m-p20b" style=3D"Margin:0;margin:0px;padding=
+:0px;width:100%"><table cellspacing=3D"0" cellpadding=3D"0" role=3D"presenta=
+tion" width=3D"100%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-spacing:0px;padding:0px;border-radius:0px;border-collapse:collapse"><tr c=
+lass=3D"mld-element"><td align=3D"left" style=3D"Margin:0;padding:0px"><p st=
+yle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;line-height:150%;font-size:16px;color:#333333;font-=
+style:normal;font-weight:normal;font-family:'verdana',geneva,sans-serif">Hi&=
+nbsp;sathish</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-=
+size-adjust:none;mso-line-height-rule:exactly;line-height:150%;font-size:16p=
+x;color:#333333;font-style:normal;font-weight:normal;font-family:'verdana',g=
+eneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;f=
+ont-size:16px;color:#333333;font-style:normal;font-weight:normal;font-family=
+:'verdana',geneva,sans-serif">Good News, You are Selected for Personal Inter=
+view.&nbsp;Don't Miss it</p><p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;f=
+ont-size:16px;color:#333333;font-style:normal;font-weight:normal;font-family=
+:'verdana',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-si=
+ze-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-h=
+eight:150%;font-size:16px;color:#333333;font-style:normal;font-weight:normal=
+;font-family:'verdana',geneva,sans-serif">Just Upload your Latest Resume and=
+ Register in Below Link. after Completion of your Registration Company will =
+send confirmation Mail.</p><p style=3D"Margin:0;-webkit-text-size-adjust:non=
+e;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;fo=
+nt-size:16px;color:#333333;font-style:normal;font-weight:normal;font-family:=
+'verdana',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-he=
+ight:150%;font-size:16px;color:#333333;font-style:normal;font-weight:normal;=
+font-family:'verdana',geneva,sans-serif"><strong><a target=3D"_blank"  href=3D=
+"https://mc.freshersindia.in/links/uBAYncaxWRxiaFsBMbWFfhbuSIFMHyAfskqCaFwMd=
+kWEuMcZauMkMbCEC/1260492" style=3D"-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:=
+#1376c8">Your Personal Interview Schedule Here</a>&nbsp;</strong></p><p styl=
+e=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;line-height:150%;font-size:16px;color:#333333;font-st=
+yle:normal;font-weight:normal;font-family:'verdana',geneva,sans-serif">&nbsp=
+;</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;line-height:150%;font-size:16px;color:#33=
+3333;font-style:normal;font-weight:normal;font-family:'verdana',geneva,sans-=
+serif"><strong><span style=3D"color:#c0392b">Note:</span> Many people are ju=
+st uploading CV but they are not completing the registration. You will get i=
+nterview calls only after the completion of all the steps of registration</s=
+trong></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;line-height:150%;font-size:16px;colo=
+r:#333333;font-style:normal;font-weight:normal;font-family:'verdana',geneva,=
+sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;font-si=
+ze:16px;color:#333333;font-style:normal;font-weight:normal;font-family:'verd=
+ana',geneva,sans-serif">Best Regards,</p><p style=3D"Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-=
+height:150%;font-size:16px;color:#333333;font-style:normal;font-weight:norma=
+l;font-family:'verdana',geneva,sans-serif">Babita HR</p><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rul=
+e:exactly;line-height:150%;font-size:16px;color:#333333;font-style:normal;fo=
+nt-weight:normal;font-family:'verdana',geneva,sans-serif">&nbsp;</p><p style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-lin=
+e-height-rule:exactly;line-height:150%;font-size:16px;color:#333333;font-sty=
+le:normal;font-weight:normal;font-family:'verdana',geneva,sans-serif">&nbsp;=
+</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:=
+none;mso-line-height-rule:exactly;line-height:150%;font-size:16px;color:#333=
+333;font-style:normal;font-weight:normal;font-family:'verdana',geneva,sans-s=
+erif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-=
+size-adjust:none;mso-line-height-rule:exactly;line-height:150%;font-size:16p=
+x;color:#333333;font-style:normal;font-weight:normal;font-family:'verdana',g=
+eneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-height:150%;f=
+ont-size:16px;color:#333333;font-style:normal;font-weight:normal;font-family=
+:'verdana',geneva,sans-serif">&nbsp;</p><p style=3D"Margin:0;-webkit-text-si=
+ze-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;line-h=
+eight:150%;font-size:16px;color:#333333;font-style:normal;font-weight:normal=
+;font-family:'verdana',geneva,sans-serif">&nbsp;</p></td></tr></table></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td=
+></tr></table></div> </div><center style=3D"width: 100%;"><div style=3D"max-=
+width: 680px; margin: 0 auto;"><table role=3D"presentation" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"max-width: 680px;">=
+<tr><td style=3D"padding: 20px; font-family:arial, sans-serif; font-size: 12=
+px; line-height: 24px; text-align: center; color: #888888;"><span></span><sp=
+an><p style=3D"font-size:12px; color:#373737; margin:0; padding:5px 0 4px 0;=
+ text-align:center; font-family:arial;">If you wish to opt out of all type o=
+f emails, click <a href=3D'https://mc.freshersindia.in/us/uBAYncaxWRxiaFsBMb=
+WFfhbuSIFMHyAfskqCaFwMdkWEuMcZauMkMbCEC'>Unsubscribe.</a></p></span></td></t=
+r></table></div></center><span style=3D"display:none !important;" class=3D"p=
+reheader"><img src=3D"https://mc.freshersindia.in/opens/uBAYncaxWRxiaFsBMbWF=
+fhbuSIFMHyAfskqCaFwMdkWEuMcZauMkMbCEC/blank.gif" alt=3D"open track" width=3D=
+"0" height=3D"0" style=3D"display:none !important;"></span> </body></html>
+--=-V1FbV2gvJ3WTX/VyfNVAoQ==--
